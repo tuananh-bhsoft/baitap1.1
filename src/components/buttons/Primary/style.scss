@@ -1,0 +1,16 @@
+@import "../../../scss/main.scss";
+
+.primary-button {
+  background: $bgPrimary;
+  color: $textWhite;
+  font-size: $textMedium;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background: $bgSecondary;
+  }
+}

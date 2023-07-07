@@ -1,0 +1,126 @@
+@import "../../scss/main.scss";
+
+.footer {
+  padding-top: $space-200;
+  margin-top: $space-200;
+
+  .content-wrapper {
+    @include flex-col-center;
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    .footer-info {
+      @include flex-row-start;
+      width: 100%;
+
+      .authorship {
+        @include flex-col-start;
+        row-gap: $space-20;
+        flex: 1;
+
+        p {
+          color: $textPrimarySLight;
+          font-size: $textMedium;
+          font-weight: 400;
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        .info {
+          font-style: italic;
+          font-size: $textSmall;
+          @include flex-col-start;
+
+          .contact-info {
+            @include flex-row-center;
+            column-gap: $space-40;
+          }
+        }
+      }
+
+      .site-doc {
+        flex: 1;
+        @include flex-row-start;
+
+        .sitemap,
+        .documents {
+          flex: 1;
+
+          .list-header {
+            color: $textWhite;
+            font-size: $textXMedium;
+          }
+
+          .list {
+            list-style-image: url("../../assets/icons/design-elements/Bullet.svg");
+            padding-left: 12px;
+            padding-top: 15px;
+
+            .list-item {
+              color: $textPrimarySLight;
+              font-size: $textMedium;
+              font-weight: 400;
+              margin-top: $space-10;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-socials {
+      @include flex-row-center;
+      column-gap: $space-40;
+      width: 100%;
+      margin: $space-100 0;
+
+      .social-links {
+        @include flex-row-center;
+        column-gap: $space-40;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .copyright {
+        color: $textPrimarySLight;
+        font-size: $textMedium;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: $space-200 $space-40 0 $space-40;
+
+      .footer-info {
+        flex-direction: column;
+        row-gap: $space-60;
+
+        .authorship {
+          width: 100%;
+        }
+
+        .site-doc {
+          flex-direction: column;
+          row-gap: $space-60;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .footer-socials {
+      flex-direction: column;
+      row-gap: $space-40;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+  }
+}

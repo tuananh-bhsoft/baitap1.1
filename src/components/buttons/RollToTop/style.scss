@@ -1,0 +1,25 @@
+@import "../../../scss/main.scss";
+
+.roll-to-top {
+  display: block;
+
+  div {
+    width: 36px;
+    height: 36px;
+    background: $bgPrimary;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      background: $bgSecondary;
+      box-shadow: -2px 6px 16px -1px $shadowSecondary;
+    }
+  }
+}

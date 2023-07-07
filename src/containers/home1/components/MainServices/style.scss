@@ -1,0 +1,80 @@
+@import "../../../../scss/main.scss";
+
+.main-services {
+  @include flex-col-center;
+  margin-top: $space-200;
+
+  .section-info {
+    @include section-info;
+    align-items: center;
+    text-align: center;
+
+    .section-title {
+      width: 40%;
+    }
+
+    .section-description {
+      width: 80%;
+    }
+  }
+
+  .section-content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: $space-60;
+    margin-top: $space-100;
+
+    .service-card {
+      @include card;
+      transition: $transition;
+
+      img {
+        max-width: 166px;
+        max-height: 166px;
+      }
+
+      &:hover {
+        box-shadow: 0px 25px 50px 25px $shadowSecondary;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: 0 $space-40;
+
+      .section-info {
+        .section-title {
+          width: 60%;
+        }
+
+        .section-description {
+          width: 90%;
+        }
+      }
+
+      .section-content {
+        grid-template-columns: repeat(2, auto);
+        row-gap: $space-60;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .section-content {
+      grid-template-columns: auto;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .section-info {
+      .section-title {
+        width: 100%;
+      }
+
+      .section-description {
+        width: 100%;
+      }
+    }
+  }
+}

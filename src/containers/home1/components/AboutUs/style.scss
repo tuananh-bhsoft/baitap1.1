@@ -1,0 +1,67 @@
+@import "../../../../scss/main.scss";
+
+.about-us {
+  @include flex-row-center;
+  column-gap: $space-40;
+  margin-top: $space-200;
+
+  .section-info {
+    @include section-info;
+    flex: 1;
+    align-items: flex-start;
+
+    .actions {
+      @include flex-row-center;
+      column-gap: $space-40;
+      margin-top: $space-60;
+
+      .watch-video {
+        @include flex-row-center;
+        column-gap: $space-10;
+
+        p {
+          color: $textTertiary;
+          font-size: $textMedium;
+        }
+      }
+    }
+  }
+
+  .section-content {
+    flex: 1;
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: 0 $space-40;
+
+      .section-info {
+        align-items: center;
+        text-align: center;
+
+        .actions {
+          align-self: center;
+
+          .watch-video {
+            display: none;
+          }
+        }
+      }
+
+      .section-content {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+  }
+
+  @media screen and (max-width: $mobile) {
+  }
+}
