@@ -63,7 +63,9 @@ const Header: FC = () => {
               <a href="/">Blog</a>
             </li>
           </ul>
-          <PrimaryButton>Contact</PrimaryButton>
+          <div className="contact-button">
+            <PrimaryButton>Contact</PrimaryButton>
+          </div>
         </div>
       </div>
 
